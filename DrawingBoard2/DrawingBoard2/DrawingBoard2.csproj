@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEFA45D6-1D58-4BC9-A413-4887D5B0325F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DrawingBoard2</RootNamespace>
+    <AssemblyName>DrawingBoard2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\DrawingBoard2.XML</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\DesignerActionListCollection.cs" />
+    <Compile Include="Controls\DrawingBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DrawingBoardDesigner.cs" />
+    <Compile Include="Controls\FontToolStripComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\OfficeColorPicker\ComboBoxColorPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\OfficeColorPicker\ComboBoxColorPicker.designer.cs">
+      <DependentUpon>ComboBoxColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OfficeColorPicker\ContextMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\OfficeColorPicker\ContextMenuForm.designer.cs">
+      <DependentUpon>ContextMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OfficeColorPicker\CustomColors.cs" />
+    <Compile Include="Controls\OfficeColorPicker\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\OfficeColorPicker\OfficeColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OfficeColorPicker\OfficeColorPicker.designer.cs">
+      <DependentUpon>OfficeColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OfficeColorPicker\SelectableColor.cs" />
+    <Compile Include="Controls\OfficeColorPicker\ToolStripColorPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolStripCheckedBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TransparentRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\PolygonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PolygonForm.designer.cs">
+      <DependentUpon>PolygonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RichTextBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RichTextBoxForm.designer.cs">
+      <DependentUpon>RichTextBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SimpleTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SimpleTextForm.designer.cs">
+      <DependentUpon>SimpleTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\BaseHandlerCollection.cs" />
+    <Compile Include="Handlers\Handler.cs" />
+    <Compile Include="Handlers\NewPointHandler.cs" />
+    <Compile Include="Handlers\PointHandler.cs" />
+    <Compile Include="Handlers\PolygonHandlerCollection.cs" />
+    <Compile Include="Handlers\RedimensionHandler.cs" />
+    <Compile Include="Handlers\RotationHandler.cs" />
+    <Compile Include="Handlers\ShapeHandlerCollection.cs" />
+    <Compile Include="Handlers\ZoomHandler.cs" />
+    <Compile Include="Helpers\Plot3DHelper.cs" />
+    <Compile Include="Helpers\PolygonHelper.cs" />
+    <Compile Include="Plot3D\Orientation3D.cs" />
+    <Compile Include="Plot3D\Plotter3D.cs" />
+    <Compile Include="Plot3D\Point3D.cs" />
+    <Compile Include="Plot3D\Vector3D.cs" />
+    <Compile Include="EnumsConstants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyEventArgs.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="RTFTypeEditor.cs" />
+    <Compile Include="SerializableFont.cs" />
+    <Compile Include="ShapeManager.cs" />
+    <Compile Include="Shapes\Arc.cs" />
+    <Compile Include="Shapes\CartesianPlane.cs" />
+    <Compile Include="Shapes\ColoredPoint.cs" />
+    <Compile Include="Shapes\ColoredPointSet.cs" />
+    <Compile Include="Shapes\Cube.cs" />
+    <Compile Include="Shapes\Ellipse.cs" />
+    <Compile Include="Shapes\Group.cs" />
+    <Compile Include="Shapes\Hexagon.cs" />
+    <Compile Include="Shapes\ImageBox.cs" />
+    <Compile Include="Shapes\Line.cs" />
+    <Compile Include="Shapes\Pentagon.cs" />
+    <Compile Include="Shapes\Pie.cs" />
+    <Compile Include="Shapes\PointElement.cs" />
+    <Compile Include="Shapes\Polygon.cs" />
+    <Compile Include="Shapes\Rect.cs" />
+    <Compile Include="Shapes\RichTextBoxShape.cs" />
+    <Compile Include="Shapes\RoundedRect.cs" />
+    <Compile Include="Shapes\ShapeElement.cs" />
+    <Compile Include="Shapes\SimpleTextBox.cs" />
+    <Compile Include="Shapes\Star.cs" />
+    <Compile Include="Shapes\Table.cs" />
+    <Compile Include="Shapes\Trapezoid.cs" />
+    <Compile Include="Shapes\Triangle.cs" />
+    <Compile Include="UndoElement.cs" />
+    <Compile Include="Utils\CalculationUtils.cs" />
+    <Compile Include="Utils\CloneUtil.cs" />
+    <Compile Include="Utils\ConverterUtil.cs" />
+    <Compile Include="Utils\DrawingUtils.cs" />
+    <Compile Include="Utils\FormUtils.cs" />
+    <Compile Include="Utils\ImageUtil.cs" />
+    <Compile Include="Utils\UndoManager.cs" />
+    <Compile Include="Utils\UndoBufferNode.cs" />
+    <Compile Include="Utils\XmlSerialization\Enums.cs" />
+    <Compile Include="Utils\XmlSerialization\EnumWrapper.cs" />
+    <Compile Include="Utils\XmlSerialization\ICustomDeserializer.cs" />
+    <Compile Include="Utils\XmlSerialization\ICustomSerializer.cs" />
+    <Compile Include="Utils\XmlSerialization\KnownDotNetTypesDeserializers.cs" />
+    <Compile Include="Utils\XmlSerialization\MemberWrapper.cs" />
+    <Compile Include="Utils\XmlSerialization\ReflectionUtils.cs" />
+    <Compile Include="Utils\XmlSerialization\StringUtils.cs" />
+    <Compile Include="Utils\XmlSerialization\TypeWrappersPool.cs" />
+    <Compile Include="Utils\XmlSerialization\UdtWrapper.cs" />
+    <Compile Include="Utils\XmlSerialization\XMLUtils.cs" />
+    <Compile Include="Utils\XmlSerialization\YAXAttributes.cs" />
+    <Compile Include="Utils\XmlSerialization\YAXExceptions.cs" />
+    <Compile Include="Utils\XmlSerialization\YAXParsingErrors.cs" />
+    <Compile Include="Utils\XmlSerialization\YAXSerializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\BucketFill.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\OfficeColorPicker\ComboBoxColorPicker.resx">
+      <DependentUpon>ComboBoxColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OfficeColorPicker\ContextMenuForm.resx">
+      <DependentUpon>ContextMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OfficeColorPicker\OfficeColorPicker.resx">
+      <DependentUpon>OfficeColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OfficeColorPicker\ToolStripColorPicker.resx">
+      <DependentUpon>ToolStripColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PolygonForm.resx">
+      <DependentUpon>PolygonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RichTextBoxForm.resx">
+      <DependentUpon>RichTextBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SimpleTextForm.resx">
+      <DependentUpon>SimpleTextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\PenDraw.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\align_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\align_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\align_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\List_bullets-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

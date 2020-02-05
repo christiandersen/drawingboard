@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0A6ED6F-DA02-46D6-A79E-F63FFE303832}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DrawingBoard</RootNamespace>
+    <AssemblyName>DrawingBoard</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\PrintPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintPreview.Designer.cs">
+      <DependentUpon>PrintPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handle.cs" />
+    <Compile Include="Shapes\Arc.cs" />
+    <Compile Include="Shapes\BoxText.cs" />
+    <Compile Include="Shapes\Ellipse.cs" />
+    <Compile Include="Shapes\Group.cs" />
+    <Compile Include="Shapes\ImageBox.cs" />
+    <Compile Include="Shapes\Line.cs" />
+    <Compile Include="Shapes\Rect.cs" />
+    <Compile Include="Shapes\RoundedRect.cs" />
+    <Compile Include="Shapes\ShapesCollection.cs" />
+    <Compile Include="Shapes\SimpleText.cs" />
+    <Compile Include="TypeEditor.cs" />
+    <Compile Include="Forms\PenPropEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PenPropEditForm.Designer.cs">
+      <DependentUpon>PenPropEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PenWR.cs" />
+    <Compile Include="Forms\PropEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PropEditForm.Designer.cs">
+      <DependentUpon>PropEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\RichForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RichForm.Designer.cs">
+      <DependentUpon>RichForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RichTextBoxPrintCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shapes.cs" />
+    <Compile Include="UndoBuffer.cs" />
+    <Compile Include="DrawingBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DrawingBoard.Designer.cs">
+      <DependentUpon>DrawingBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIALib\WiaLib.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\PrintPreview.resx">
+      <DependentUpon>PrintPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PenPropEditForm.resx">
+      <DependentUpon>PenPropEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PropEditForm.resx">
+      <DependentUpon>PropEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RichForm.resx">
+      <DependentUpon>RichForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrawingBoard.resx">
+      <DependentUpon>DrawingBoard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

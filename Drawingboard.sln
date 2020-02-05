@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingBoard", "DrawingBoard\DrawingBoard.csproj", "{A0A6ED6F-DA02-46D6-A79E-F63FFE303832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingBoardForm", "DrawingBoardForm\DrawingBoardForm.csproj", "{1175498E-D4E4-4E97-84FA-1EC3D4B52F0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox", "ToolBox\ToolBox.csproj", "{362FB823-2B9E-41B4-B028-F6250AE4996D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0A6ED6F-DA02-46D6-A79E-F63FFE303832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A6ED6F-DA02-46D6-A79E-F63FFE303832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A6ED6F-DA02-46D6-A79E-F63FFE303832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A6ED6F-DA02-46D6-A79E-F63FFE303832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1175498E-D4E4-4E97-84FA-1EC3D4B52F0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1175498E-D4E4-4E97-84FA-1EC3D4B52F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1175498E-D4E4-4E97-84FA-1EC3D4B52F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1175498E-D4E4-4E97-84FA-1EC3D4B52F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{362FB823-2B9E-41B4-B028-F6250AE4996D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{362FB823-2B9E-41B4-B028-F6250AE4996D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{362FB823-2B9E-41B4-B028-F6250AE4996D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{362FB823-2B9E-41B4-B028-F6250AE4996D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
